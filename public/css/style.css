@@ -1,46 +1,6 @@
 /* @override http://localhost:4567/css/style.css */
 
 body {
-	background: #5A2E2E;
-	color: #FFFEDF;
+	background: #FFFFFF;
+	color: #333333;
 }
-
-.landing-box {
-	width: 625px;
-	margin: 0px auto;
-	margin-top: 200px;
-	padding: 25px 0px;
-	background: #922634;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;
-}
-
-nav {
-	width: 100px;
-	padding: 5px;
-	display: block;
-	background: #922634;
-	-moz-border-radius: 7px;
-	-webkit-border-radius: 7px;
-	border-radius: 7px;	
-	text-align: center;
-	float: right;
-}
-
-a {
-	color: #fff;
-	text-decoration: none;
-	font: 16px/1.5 Helvetica, Arial, sans-serif;
-}
-
-a:hover {
-	border-bottom: 1px solid #fff;
-}
-
-h2 {
-	font-family: "Helvetica Neue", Arial, sans-serif;
-	font-size: 42px;
-	text-align: center;
-}
-
