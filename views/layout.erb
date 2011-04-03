@@ -1,0 +1,36 @@
+<!doctype html>  
+
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+
+  <!-- Force latest IE rendering engine & Chrome Frame -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <!-- Page Info -->
+  <title><%= @title %></title>
+
+  <!-- Include CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+ 
+  <!-- Include Modernizr -->
+  <script src="/js/modernizr-1.7.min.js"></script>
+
+</head>
+<body>
+	<nav>
+		<a href="/scotch">Scotch List</a><br>
+		<a href="/scotch/add">Add Scotch</a>
+	</nav>
+<div class="landing-box">
+   <%= yield %>
+</div>
+   <!-- Include jQuery and Other JS -->
+   <script src="/js/jquery-1.5.2.min.js"></script>
+
+</body>
+</html>
