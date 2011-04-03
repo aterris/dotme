@@ -7,10 +7,20 @@ before do
   headers "Content-Type" => "text/html; charset=utf-8"
 end
 
-#Homepage
+# Profile Page
 get '/' do
   @title = "dotme"
   erb :profile
+end
+
+# Setup Page
+get '/setup/?' do
+  erb :setup
+end
+
+# Setup Page
+get '/settings/?' do
+  erb :settings
 end
 
 # Errors
