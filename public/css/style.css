@@ -19,9 +19,9 @@ figure#avatar
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
-  -moz-box-shadow:0px 0px 1px #000000;
-  -webkit-box-shadow:0px 0px 1px #000000;
-  box-shadow:0px 0px 1px #000000;
+  -moz-box-shadow:0px 0px 6px #666;
+  -webkit-box-shadow:0px 0px 6px #666;
+  box-shadow:0px 0px 6px #666;
 }
 
 figure#avatar img
