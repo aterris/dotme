@@ -9,7 +9,7 @@ body {
 
 figure#avatar
 {
-  padding:12px 12px 40px 12px;
+  padding:16px 12px 16px 12px;
   border: 1px solid #e3e3e3;
   display: block;
   width:175px;
@@ -26,9 +26,9 @@ figure#avatar
 
 figure#avatar img
 {
-  -moz-border-radius:4px 4px 0px 0px;
-  -webkit-border-radius:4px 4px 0px 0px;
-  border-radius:4px 4px 0px 0px;
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
 }
 
 #profile
