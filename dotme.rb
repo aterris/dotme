@@ -11,6 +11,8 @@ end
 get '/' do
   @title = "dotme"
   @email = "atterris@gmail.com"
+  @name = "Andrew Terris"
+  @subheading = "I love coding"
   @avatar = "http://www.gravatar.com/avatar/df5702df61888046b35a4313fc4d4cdb?s=128"
   erb :profile
 end

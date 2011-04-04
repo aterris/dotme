@@ -4,3 +4,9 @@ body {
 	background: #FFFFFF;
 	color: #333333;
 }
+
+figure#avatar
+{
+  padding:10px;
+  border: 1px solid #dfdfdf;
+}
