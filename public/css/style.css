@@ -1,7 +1,7 @@
 /* @override http://localhost:4567/css/style.css */
 
 body {
-	background: #FFFFFF;
+	background: #f0f0f0;
 	color: #333333;
   font-family: 'Droid Sans', arial, serif;
 }
@@ -35,6 +35,8 @@ figure#avatar img
   margin: 0px auto;
   border: 1px solid #e3e3e3;
   padding: 25px;
+  margin-top: 115px;
+  background: #ffffff;
 }
 
 #profile h1
