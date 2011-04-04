@@ -47,6 +47,11 @@ figure#avatar img
   margin-top: 115px;
 }
 
+#info
+{
+  width:373px;
+}
+
 #profile #details
 {
   width:600px;
