@@ -1,7 +1,7 @@
 /* @override http://localhost:4567/css/style.css */
 
 body {
-	background: #f0f0f0;
+	background: #ffffff;
 	color: #333333;
   font-family: 'Droid Sans', arial, serif;
 }
@@ -41,14 +41,12 @@ figure#avatar img
   width: 600px;
   margin: 0px auto;
   margin-top: 115px;
-  background: #ffffff;
 }
 
 #profile #details
 {
   width:600px;
   margin: 0px auto;
-  background: #ffffff;
   border-top: 1px solid #e3e3e3;
 }
 
@@ -61,7 +59,7 @@ figure#avatar img
 {
   border-top:1px solid #FF8A84;
   background: -moz-linear-gradient(top, #FE6763 0%, #FFFFFF 22%, #FFFFFF 100%);
-  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FE6763), color-stop(22%,#FFFFFF), color-stop(100%,#FFFFFF));
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FF8A84), color-stop(22%,#FFFFFF), color-stop(100%,#FFFFFF));
   background: -o-linear-gradient(top, #FE6763 0%, #FFFFFF 22%, #FFFFFF 100%);
   background: linear-gradient(top, #FE6763 0%, #FFFFFF 22%, #FFFFFF 100%);
 }
