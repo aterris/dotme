@@ -59,17 +59,26 @@ figure#avatar img
 
 #links
 {
+  border-top:1px solid #FF8A84;
+  background: -moz-linear-gradient(top, #FE6763 0%, #FFFFFF 22%, #FFFFFF 100%);
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FE6763), color-stop(22%,#FFFFFF), color-stop(100%,#FFFFFF));
+  background: -o-linear-gradient(top, #FE6763 0%, #FFFFFF 22%, #FFFFFF 100%);
+  background: linear-gradient(top, #FE6763 0%, #FFFFFF 22%, #FFFFFF 100%);
+}
+
+#links ul
+{
   width:600px;
   margin: 0px auto;
 }
 
-#links li
+#links ul li
 {
   list-style-type: none;
   display: inline;
 }
 
-#links a
+#links ul li a
 {
   width: 40px;
   height:40px;
