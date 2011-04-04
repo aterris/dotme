@@ -30,13 +30,22 @@ figure#avatar img
 #profile
 {
   border-bottom:1px solid #dfdfdf;
+}
+
+#profile #overview
+{
   width: 600px;
-  height: 373px;
   margin: 0px auto;
-  border: 1px solid #e3e3e3;
-  padding: 25px;
   margin-top: 115px;
   background: #ffffff;
+}
+
+#profile #details
+{
+  width:600px;
+  margin: 0px auto;
+  background: #ffffff;
+  border-top: 1px solid #e3e3e3;
 }
 
 #profile h1
