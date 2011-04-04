@@ -14,6 +14,17 @@ figure#avatar
   width:128px;
   height:128px;
   float:left;
+  background: #eeeeee;  
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
+}
+
+figure#avatar img
+{
+  -moz-border-radius:4px;
+  -webkit-border-radius:4px;
+  border-radius:4px;
 }
 
 #profile
@@ -34,13 +45,15 @@ figure#avatar
 {
   list-style-type: none;
   display: inline;
-}
+}`
 
 #links a
 {
   width: 40px;
   height:40px;
   text-indent:-1000em;
+  display:block;
+  float:left;
 }
 
 #links #twitter { background: url(/img/social/twitter.png); }
