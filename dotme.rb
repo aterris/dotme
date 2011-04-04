@@ -10,9 +10,8 @@ end
 # Profile Page
 get '/' do
   @title = "dotme"
-  email = "atterris@gmail.com"
-  hash = Digest::MD5.hexdigest(@email_address)  
-  @avatar = "http://www.gravatar.com/avatar/#{hash}"
+  @email = "atterris@gmail.com"
+  @avatar = "http://www.gravatar.com/avatar/df5702df61888046b35a4313fc4d4cdb?s=128"
   erb :profile
 end
 
