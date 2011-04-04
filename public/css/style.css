@@ -30,6 +30,10 @@ figure#avatar img
 #profile
 {
   border-bottom:1px solid #dfdfdf;
+  background: -moz-linear-gradient(top, #ffffff, #f0f0f0);
+  background: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#f0f0f0));
+  background: -o-linear-gradient(top, #ffffff, #f0f0f0);
+  background: linear-gradient(top, #ffffff, #f0f0f0);
 }
 
 #profile #overview
