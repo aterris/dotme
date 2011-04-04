@@ -16,4 +16,13 @@ figure#avatar
 #profile
 {
   border-bottom:1px solid #dfdfdf;
+  width: 600px;
+  height: 373px;
+  margin: 0px auto;
+}
+
+#links
+{
+  width:600px;
+  margin: 0px auto;
 }
