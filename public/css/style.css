@@ -30,6 +30,12 @@ figure#avatar
   margin: 0px auto;
 }
 
+#links li
+{
+  list-style-type: none;
+  display: inline;
+}
+
 #links a
 {
   width: 40px;
