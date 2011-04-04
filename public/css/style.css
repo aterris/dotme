@@ -50,6 +50,8 @@ figure#avatar img
 #info
 {
   width:373px;
+  float:right;
+  text-align:right;
 }
 
 #profile #details
