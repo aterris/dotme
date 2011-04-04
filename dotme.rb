@@ -16,6 +16,15 @@ get '/' do
   @bio_title = "About Me"
   @bio = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
+  @twitter_url = "http://twitter.com/aterris"
+  @github_url = "http://github.com/aterris"
+  @linkedin_url = "http://www.linkedin.com/in/aterris"
+  @forrst_url = "http://forrst.me/aterris"
+  @dribble_url = "http://dribble.com"
+  @foursquare_url = "http://foursquare.com/aterris"
+  @gowalla_url ="http://gowalla.com/users/aterris"
+  @facebook_url = "http://www.facebook.com/atterris"
+  @blog_url = "http://wordpress.com"
   erb :profile
 end
 
