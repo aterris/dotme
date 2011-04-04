@@ -34,7 +34,12 @@ figure#avatar img
   height: 373px;
   margin: 0px auto;
   border: 1px solid #e3e3e3;
-  padding: 15px;
+  padding: 25px;
+}
+
+#profile h1
+{
+  margin: 0px;
 }
 
 #links
