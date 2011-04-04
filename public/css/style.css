@@ -12,3 +12,8 @@ figure#avatar
   border: 1px solid #dfdfdf;
   display: block;
 }
+
+#profile
+{
+  border-bottom:1px solid #dfdfdf;
+}

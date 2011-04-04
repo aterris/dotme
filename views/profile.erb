@@ -1,17 +1,19 @@
-<section id="profile-overview">
-  <figure id="avatar">
-    <img height="128" width="128" src="<%= @avatar %>" alt="<%= @name %>" />
-  </figure>
-  <h1><%= @name %></h1>
-  <h2><%= @subheading %></h2>
+<section id="profile">
+  <section id="overview">
+    <figure id="avatar">
+      <img src="<%= @avatar %>" alt="<%= @name %>" />
+    </figure>
+    <h1><%= @name %></h1>
+    <h2><%= @subheading %></h2>
+  </section>
+
+  <section id="details">
+    <h2><%= @bio_heading %></h2>
+    <p><%= @bio %></p>
+  </section>
 </section>
 
-<section id="profile-details">
-  <h2><%= @bio_heading %></h2>
-  <p><%= @bio %></p>
-</section>
-
-<section id="profile-links">
+<section id="links">
   <a href="<%= @twitter_url %>" alt="">Twitter</a>
   <a href="<%= @github_url %>" alt="">Github</a>
   <a href="<%= @linkedin_url %>" alt="">Linkedin</a>
@@ -21,6 +23,4 @@
   <a href="<%= @gowalla_url %>" alt="">Gowalla</a>
   <a href="<%= @facebook_url %>" alt="">Facebook</a>
   <a href="<%= @blog_url %>" alt="">Blog</a>
-
-
 </section>
