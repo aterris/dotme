@@ -30,10 +30,10 @@ figure#avatar img
 #profile
 {
   border-bottom:1px solid #dfdfdf;
-  background: -moz-linear-gradient(top, #ffffff, #f0f0f0);
-  background: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#f0f0f0));
-  background: -o-linear-gradient(top, #ffffff, #f0f0f0);
-  background: linear-gradient(top, #ffffff, #f0f0f0);
+  background: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 78%, #F0F0F0 100%);
+  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FFFFFF), color-stop(78%,#FFFFFF), color-stop(100%,#F0F0F0));
+  background: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 78%, #F0F0F0 100%);
+  background: linear-gradient(top, #FFFFFF 0%, #FFFFFF 78%, #F0F0F0 100%);
 }
 
 #profile #overview
