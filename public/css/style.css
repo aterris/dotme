@@ -11,6 +11,7 @@ figure#avatar
   padding:10px;
   border: 1px solid #dfdfdf;
   display: block;
+  width:148px;
 }
 
 #profile
