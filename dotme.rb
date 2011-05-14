@@ -28,16 +28,6 @@ get '/' do
   erb :profile
 end
 
-# Setup Page
-get '/setup/?' do
-  erb :setup
-end
-
-# Setup Page
-get '/settings/?' do
-  erb :settings
-end
-
 # Errors
 not_found do
   erb :'404'
