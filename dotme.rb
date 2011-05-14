@@ -1,6 +1,6 @@
 # Models are defined in a separate File
 require 'models'
-
+require 'configme'
 
 # Set Content Type
 before do 
