@@ -1,5 +1,6 @@
-# Models are defined in a separate File
-require 'models'
+require "bundler/setup"
+require "sinatra"
+require 'models' # Models are defined in a separate File
 require 'configme'
 
 # Set Content Type
