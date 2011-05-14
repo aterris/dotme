@@ -1,5 +1,3 @@
-require "bundler/setup"
-require "sinatra"
 require 'models' # Models are defined in a separate File
 require 'configme'
 

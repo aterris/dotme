@@ -1,6 +1,5 @@
 ## Classes ##
 class User
-
   include DataMapper::Resource
 
   property :id, Serial
@@ -14,7 +13,6 @@ end
 
 
 class Profile
-  
   include DataMapper::Resource
 
   property :id,     Serial
@@ -37,7 +35,6 @@ class Profile
 end
 
 class Options
-  
   include DataMapper::Resource
 
   property :id,     Serial
