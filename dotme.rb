@@ -1,6 +1,4 @@
 enable :sessions
-set :session_fail, '/login'
-set :session_secret, ENV['DOTME_SECRET']
 
 require 'sinatra/session'
 require 'models'
@@ -14,11 +12,11 @@ end
 get '/' do
   @dotme = session['dotme']
 
-  if session? && Profile.count == 0
+  if session['dotme'] && Profile.count == 0
     @title = 'dotme setup'
     @profile = false
      ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |link|
-       l = Link.first_or_create(:link_name => link)
+       l = Link.first_or_create(:name => link)
      end
   else
     @profile = Profile.get(1)
@@ -31,7 +29,7 @@ get '/' do
 end
 
 get '/login' do
-  if session?
+  if session['dotme']
     redirect '/'
   else
     erb :login
@@ -49,7 +47,7 @@ post '/login' do
 end
 
 get '/logout' do
-  session_end!
+  session.clear
   redirect '/'
 end
 
