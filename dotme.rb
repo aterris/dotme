@@ -15,8 +15,12 @@ get '/' do
 
   if session? && Profile.count == 0
     @profile = false
+     ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |link|
+       l = Link.first_or_create(:link_name => link)
+     end
   else
     @profile = Profile.all
+    @links = Link.all
   end
 
   @title = "Andrew Terris"
