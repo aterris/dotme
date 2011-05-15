@@ -1,5 +1,4 @@
-require 'models' # Models are defined in a separate File
-require 'configme'
+require 'models'
 
 # Set Content Type
 before do 
