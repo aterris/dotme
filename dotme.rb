@@ -9,6 +9,15 @@ end
 # Profile Page
 get '/' do
   @dotme = session['dotme']
+  
+  unless @dotme
+    @profile = false
+  else
+    @profile = Profile.all
+  do
+
+
+
   @title = "Andrew Terris"
   @email = "atterris@gmail.com"
   @subtitle = "I love coding"

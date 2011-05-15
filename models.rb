@@ -40,3 +40,4 @@ DataMapper.finalize
 
 # Setup Database For Local and Heroku
 DataMapper::setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/db/dotme.db")
+
