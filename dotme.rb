@@ -40,7 +40,7 @@ end
 
 get '/login' do
   if session?
-    redirect /
+    redirect '/'
   else
     erb :login
   end
@@ -63,6 +63,20 @@ end
 
 put '/update' do
   data = JSON.parse request.body.read
+end
+
+post '/setup' do
+  if session?
+    profile=Profile.create(
+      :email=>params[:email],
+      :title=>params[:title],
+      :subtitle=>params[:subtitle],
+      :caption=>params[:caption],
+      :location=>params[:location],
+      :bio=>params[:bio],
+      :created_at=>Time.now
+    )
+  end
 end
 
 # Errors
