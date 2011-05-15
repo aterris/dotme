@@ -1,9 +1,9 @@
 <section id="links">
   <% if @links.count > 0 %>
     <ul>
-      <% @links.each do |link| %>
-        <% if link.url %>
-          <li><a id="<%= link.name %>" href="<%= link.url %>" alt=""><%= link.name %></a></li>
+      <% @links.each do |l| %>
+        <% if l.link_value %>
+          <li><a id="<%= l.link_name %>" href="<%= l.link_value %>" alt=""><%= l.link_name %></a></li>
         <% end %>
       <% end %>
     </ul>

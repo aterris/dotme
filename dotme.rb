@@ -3,7 +3,7 @@ enable :sessions
 require 'models'
 require 'digest/md5'
 
-before do 
+before do
   headers "Content-Type" => "text/html; charset=utf-8" # Set Content Type
 end
 
@@ -12,23 +12,31 @@ get '/' do
   @dotme = session['dotme']
 
   if Profile.count == 0
-    @title = 'dotme setup'
-    @profile = false
-     ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |link|
-       l = Link.first_or_create(:name => link)
-     end
+    @profile = 'boom?'
+    if session['dotme']
+      @profile = 'setup.boom'
+      ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |l|
+        link = Link.create({:link_name => 'fuck'})
+      end      
+    end
   else
-    @profile = Profile.get(1)
-    @title = @profile.title
-    email_digest = Digest::MD5.hexdigest(@profile.email)
-    @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
-    @links = Link.all( :url.not => '' )
+    @profile = 'boom!'
   end
-  erb :index
+  # if Profile.count == 0
+  #   setup
+  # else
+  #   @profile = Profile.get(1)
+  #   @title = @profile.title
+  #   email_digest = Digest::MD5.hexdigest(@profile.email)
+  #   @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
+  #   @links = Link.all( :url.not => '' )
+  # end
+  # erb :index
+  erb :test
 end
 
 get '/login' do
-  if session['dotme']
+  if session['dotme'] == true
     redirect '/'
   else
     erb :login
@@ -37,7 +45,7 @@ end
 
 post '/login' do
   unless params[:user] == ENV['DOTME_USER'] && params[:pass] == ENV['DOTME_PASS']
-    session['dotme'] = false
+    #add flash message
     redirect '/login'
   else
     session['dotme'] = true

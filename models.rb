@@ -17,8 +17,8 @@ class Link
   include DataMapper::Resource
 
   property :id,               Serial
-  property :name,        String
-  property :url,       String
+  property :link_name,        String
+  property :link_value,       String
   property :created_at,       DateTime
   property :updated_at,       DateTime
 end
