@@ -21,7 +21,7 @@ get '/' do
      end
   else
     @profile = Profile.get(1)
-    set :email_digest = Digest::MD5.hexdigest(@profile.email)
+    email_digest = Digest::MD5.hexdigest(@profile.email)
     @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
     @links = Link.all
   end
