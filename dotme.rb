@@ -14,7 +14,7 @@ end
 get '/' do
   @dotme = session['dotme']
 
-  if session['dotme'] && Profile.count == 0
+  if session? && Profile.count == 0
     @title = 'dotme setup'
     @profile = false
      ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |link|

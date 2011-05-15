@@ -1,13 +1,9 @@
 <section id="links">
   <ul>
-    <li><a id="twitter" href="<%= @twitter_url %>" alt="">Twitter</a></li>
-    <li><a id="github" href="<%= @github_url %>" alt="">Github</a></li>
-    <li><a id="linkedin" href="<%= @linkedin_url %>" alt="">Linkedin</a></li>
-    <li><a id="forrst" href="<%= @forrst_url %>" alt="">Forrst</a></li>
-    <li><a id="dribble" href="<%= @dribble_url %>" alt="">Dribble</a></li>
-    <li><a id="foursquare" href="<%= @foursquare_url %>" alt="">Foursquare</a></li>
-    <li><a id="gowalla" href="<%= @gowalla_url %>" alt="">Gowalla</a></li>
-    <li><a id="facebook" href="<%= @facebook_url %>" alt="">Facebook</a></li>
-    <li><a id="blog" href="<%= @blog_url %>" alt="">Blog</a></li>
+    <% @links.each do |link| %>
+      <% if link.link_value %>
+        <li><a id="<%= link.link_name %>" href="<%= link.link_value %>" alt=""><%= link.link_name %></a></li>
+      <% end %>
+    <% end %>
   </ul>
 </section>
