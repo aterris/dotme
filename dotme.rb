@@ -1,3 +1,4 @@
+enable :sessions
 require 'models'
 
 # Set Content Type
@@ -31,18 +32,18 @@ get '/login' do
 end
 
 post '/login' do
-  unless params[:user] = ENV['DOTME_USER'] || params[:pass] = ENV['DOTME_PASS'] do
-    # don't match
+  unless params[:user] == ENV['DOTME_USER'] && params[:pass] == ENV['DOTME_PASS'] do
+    session['dotme'] = false
+    redirect '/login'
   else
-    # do match
+    session['dotme'] = true
+    redirect '/'
   end
 end
 
 put '/update'
   data = JSON.parse request.body.read
 end
-
-
 
 # Errors
 not_found do
