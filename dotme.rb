@@ -12,11 +12,11 @@ end
 # Profile Page
 get '/' do
   @dotme = session['dotme']
-  
-  if session?
-    @profile = Profile.all
-  else
+
+  if session? && Profile.count == 0
     @profile = false
+  else
+    @profile = Profile.all
   end
 
   @title = "Andrew Terris"
