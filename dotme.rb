@@ -41,7 +41,7 @@ post '/login' do
   end
 end
 
-put '/update'
+put '/update' do
   data = JSON.parse request.body.read
 end
 
