@@ -30,6 +30,14 @@ get '/login' do
   # login form
 end
 
+post '/login' do
+  unless params[:user] = ENV['DOTME_USER'] || params[:pass] = ENV['DOTME_PASS'] do
+    # don't match
+  else
+    # do match
+  end
+end
+
 put '/update'
   data = JSON.parse request.body.read
 end
