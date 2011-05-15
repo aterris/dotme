@@ -1,47 +1,38 @@
 ## Classes ##
-class User
-  include DataMapper::Resource
-
-  property :id, Serial
-  property :username, String
-  property :password, String
-  property :email, String
-  property :display_name, String
-  property :created_at, DateTime
-  property :updated_at, DateTime
-end
-
-
 class Profile
   include DataMapper::Resource
 
-  property :id,     Serial
-  property :title,    String
-  property :subtitle,   String
-  property :bio,    String
-  property :avatar,   String
-  property :twitter_url,  String
-  property :github_url,   String
-  property :linkedin_url, String
-  property :forrst_url,   String
-  property :dribble_url,  String
-  property :foursquare_url, String
-  property :gowalla_url,  String
-  property :facebook_url, String
-  property :blog_url,   String
-  property :user_id,    Integer
+  property :id,           Serial
+  property :email,        String
+  property :title,        String
+  property :subtitle,     String
+  property :caption,      String
+  property :location,     String
+  property :bio,          Text
   property :created_at,   DateTime
   property :updated_at,   DateTime
 end
 
-class Options
+class Link
   include DataMapper::Resource
 
-  property :id,     Serial
-  property :background_color, String
-  property :user_id,    Integer
-  property :created_at,   DateTime
-  property :updated_at,   DateTime
+  property :id,               Serial
+  property :link_name,        String
+  property :link_value,       String
+  property :created_at,       DateTime
+  property :updated_at,       DateTime
+end
+
+class Option
+  include DataMapper::Resource
+
+  property :id,                 Serial
+  property :font,               String
+  property :background_color,   String
+  property :header_text_color,  String
+  property :body_text_color,    String
+  property :created_at,         DateTime
+  property :updated_at,         DateTime
 end
 
 # Finalize them models
