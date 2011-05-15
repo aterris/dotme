@@ -32,7 +32,7 @@ get '/login' do
 end
 
 post '/login' do
-  unless params[:user] == ENV['DOTME_USER'] && params[:pass] == ENV['DOTME_PASS'] do
+  unless params[:user] == ENV['DOTME_USER'] && params[:pass] == ENV['DOTME_PASS']
     session['dotme'] = false
     redirect '/login'
   else
