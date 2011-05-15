@@ -26,6 +26,16 @@ get '/' do
   erb :profile
 end
 
+get '/login' do
+  # login form
+end
+
+put '/update'
+  data = JSON.parse request.body.read
+end
+
+
+
 # Errors
 not_found do
   erb :'404'
