@@ -103,3 +103,12 @@ figure#avatar img
 #links #twitter { background: url(/img/social/twitter.png); }
 #links #facebook { background: url(/img/social/facebook.png); }
 #links #linkedin { background: url(/img/social/linkedin.png); }
+
+/* @group */
+#login
+{
+	width: 600px;
+	margin: 0px auto;
+	margin-top: 115px;
+}
+/* @end */
