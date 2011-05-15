@@ -2,6 +2,7 @@ enable :sessions
 set :session_fail, '/login'
 set :session_secret, ENV['DOTME_SECRET']
 
+require 'sinatra/session'
 require 'models'
 
 # Set Content Type
