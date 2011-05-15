@@ -1,5 +1,6 @@
 source :gemcutter
 gem 'sinatra'
+gem 'sinatra-session'
 gem 'json'
 gem 'i18n'
 gem 'dm-core'
