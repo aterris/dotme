@@ -10,7 +10,7 @@ end
 get '/' do
   @dotme = session['dotme']
   
-  unless @dotme
+  if session['dotme'] && Profile.count == 0
     @profile = false
   else
     @profile = Profile.all
