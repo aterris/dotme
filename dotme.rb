@@ -25,7 +25,7 @@ get '/' do
     @title = @profile.title
     email_digest = Digest::MD5.hexdigest(@profile.email)
     @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
-    @links = Link.all
+    @links = Link.all( :url.not => '' )
   end
   erb :index
 end

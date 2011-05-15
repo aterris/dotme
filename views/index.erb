@@ -4,9 +4,7 @@
   <% end %>
   
   <%= erb :profile %>
-  <% if @links.count > 0 %>
-    <%= erb :links %>
-  <% end %>
+  <%= erb :links %>
 <% else %>
   <%= erb :setup %>
 <% end %>
