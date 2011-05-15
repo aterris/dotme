@@ -14,9 +14,7 @@ get '/' do
     @profile = false
   else
     @profile = Profile.all
-  do
-
-
+  end
 
   @title = "Andrew Terris"
   @email = "atterris@gmail.com"
@@ -34,7 +32,7 @@ get '/' do
   @gowalla_url ="http://gowalla.com/users/aterris"
   @facebook_url = "http://www.facebook.com/atterris"
   @blog_url = "http://wordpress.com"
-  erb :profile
+  erb :index
 end
 
 get '/login' do
