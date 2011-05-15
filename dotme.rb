@@ -13,7 +13,7 @@ end
 get '/' do
   @dotme = session['dotme']
 
-  if session? && Profile.count == 0
+  if session['dotme'] && Profile.count == 0
     @profile = false
      ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |link|
        l = Link.first_or_create(:link_name => link)
@@ -44,7 +44,7 @@ end
 
 get '/login' do
   if session?
-    redirect /
+    redirect '/'
   else
     erb :login
   end
@@ -67,6 +67,21 @@ end
 
 put '/update' do
   data = JSON.parse request.body.read
+end
+
+post '/setup' do
+  if session['dotme']
+    profile=Profile.create(
+      :email=>params[:email],
+      :title=>params[:title],
+      :subtitle=>params[:subtitle],
+      :caption=>params[:caption],
+      :location=>params[:location],
+      :bio=>params[:bio],
+      :created_at=>Time.now
+    )
+  end
+  redirect '/'
 end
 
 # Errors
