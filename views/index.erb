@@ -1,8 +1,8 @@
-<% if @dotme %>
-  <%= erb :configbar %>
-<% end %>
-
 <% if @profile %>
+  <% if @dotme %>
+    <%= erb :configbar %>
+  <% end %>
+  
   <%= @profile %>
   <%= erb :profile %>
   <%= erb :links %>
