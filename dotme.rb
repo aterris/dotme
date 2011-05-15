@@ -28,7 +28,7 @@ get '/' do
 end
 
 get '/login' do
-  # login form
+  erb :login
 end
 
 post '/login' do
