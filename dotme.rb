@@ -13,7 +13,7 @@ end
 get '/' do
   @dotme = session['dotme']
 
-  if session? && Profile.count == 0
+  if session['dotme'] && Profile.count == 0
     @profile = false
   else
     @profile = Profile.all
@@ -66,7 +66,7 @@ put '/update' do
 end
 
 post '/setup' do
-  if session?
+  if session['dotme']
     profile=Profile.create(
       :email=>params[:email],
       :title=>params[:title],
@@ -77,6 +77,7 @@ post '/setup' do
       :created_at=>Time.now
     )
   end
+  redirect '/'
 end
 
 # Errors
