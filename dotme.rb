@@ -8,6 +8,7 @@ end
 
 # Profile Page
 get '/' do
+  @dotme = session['dotme']
   @title = "Andrew Terris"
   @email = "atterris@gmail.com"
   @subtitle = "I love coding"
