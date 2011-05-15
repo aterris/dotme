@@ -15,12 +15,14 @@ get '/' do
   @dotme = session['dotme']
 
   if session['dotme'] && Profile.count == 0
+    @title = 'dotme setup'
     @profile = false
      ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |link|
        l = Link.first_or_create(:link_name => link)
      end
   else
     @profile = Profile.get(1)
+    @title = @profile.title
     email_digest = Digest::MD5.hexdigest(@profile.email)
     @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
     @links = Link.all
