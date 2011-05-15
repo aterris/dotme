@@ -1,3 +1,11 @@
 dotme
 
 a one page personal app based on Sinatra, inspired by the plethora of .me sites such as forrst.me and about.me
+
+Set these environment variables:
+
+h2. DOTME_USER and DOTME_PASS
+Your username and password
+
+h2. DOTME_SECRET
+A random string used to protect the integrity of the session

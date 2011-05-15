@@ -1,4 +1,7 @@
 enable :sessions
+set :session_fail, '/login'
+set :session_secret, ENV['DOTME_SECRET']
+
 require 'models'
 
 # Set Content Type
@@ -10,10 +13,10 @@ end
 get '/' do
   @dotme = session['dotme']
   
-  unless @dotme
-    @profile = false
-  else
+  if session?
     @profile = Profile.all
+  else
+    @profile = false
   end
 
   @title = "Andrew Terris"
@@ -36,7 +39,11 @@ get '/' do
 end
 
 get '/login' do
-  erb :login
+  if session?
+    redirect /
+  else
+    erb :login
+  end
 end
 
 post '/login' do
@@ -47,6 +54,11 @@ post '/login' do
     session['dotme'] = true
     redirect '/'
   end
+end
+
+get '/logout' do
+  session_end!
+  redirect '/'
 end
 
 put '/update' do
