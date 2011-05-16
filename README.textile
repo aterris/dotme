@@ -2,7 +2,7 @@ h1. dotme
 
 A one page personal app written in Sinatra, inspired by the plethora of .me sites such as forrst.me and about.me.
 
-h1. Deploying it on heroku
+h2. Deploying it on heroku
 
 This project was written with the intention of deploying this app to heroku.com, but can be hosted anywhere fine rubies are deployable. _If you already have an account on heroku, skip to step 3_.
 
