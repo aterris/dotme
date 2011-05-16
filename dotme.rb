@@ -12,27 +12,22 @@ get '/' do
   @dotme = session['dotme']
 
   if Profile.count == 0
-    @profile = 'boom?'
     if session['dotme']
-      @profile = 'setup.boom'
+      @title = 'dotme setup'
       ['portfolio','rss','twitter','facebook','github','forrst','dribble','linkedin','gowalla','foursquare'].each do |l|
-        link = Link.create({:link_name => 'fuck'})
-      end      
+        link = Link.first_or_create(:name => l, :url => '')
+      end
+    else
+      redirect '/login'
     end
   else
-    @profile = 'boom!'
+    @profile = Profile.get(1)
+    @title = @profile.title
+    email_digest = Digest::MD5.hexdigest(@profile.email)
+    @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
+    @links = Link.all( :url.not => '' )
   end
-  # if Profile.count == 0
-  #   setup
-  # else
-  #   @profile = Profile.get(1)
-  #   @title = @profile.title
-  #   email_digest = Digest::MD5.hexdigest(@profile.email)
-  #   @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
-  #   @links = Link.all( :url.not => '' )
-  # end
-  # erb :index
-  erb :test
+  erb :index
 end
 
 get '/login' do

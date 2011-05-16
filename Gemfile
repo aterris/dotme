@@ -2,9 +2,10 @@ source :gemcutter
 gem 'sinatra'
 gem 'json'
 gem 'i18n'
-gem 'dm-core'
-gem 'dm-timestamps'
-gem 'dm-validations'
-gem 'dm-migrations'
-gem 'dm-postgres-adapter'
-gem 'dm-sqlite-adapter'
+gem 'data_mapper'
+group :development do
+  gem 'dm-sqlite-adapter'
+end
+group :production do
+  gem 'dm-postgres-adapter'
+end

@@ -2,8 +2,8 @@
   <% if @links.count > 0 %>
     <ul>
       <% @links.each do |l| %>
-        <% if l.link_value %>
-          <li><a id="<%= l.link_name %>" href="<%= l.link_value %>" alt=""><%= l.link_name %></a></li>
+        <% if l.url %>
+          <li><a id="<%= l.name %>" href="<%= l.url %>" alt=""><%= l.name %></a></li>
         <% end %>
       <% end %>
     </ul>
