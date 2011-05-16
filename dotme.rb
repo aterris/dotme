@@ -31,7 +31,8 @@ get '/' do
 end
 
 get '/login' do
-  if session['dotme'] == true
+  @title = 'dotme login'
+  if session['dotme']
     redirect '/'
   else
     erb :login
