@@ -1,11 +1,18 @@
-dotme
+h1. dotme
 
-a one page personal app based on Sinatra, inspired by the plethora of .me sites such as forrst.me and about.me
+A one page personal app written in Sinatra, inspired by the plethora of .me sites such as forrst.me and about.me.
 
-Set these environment variables:
+h1. Deploying it on heroku
 
-h2. DOTME_USER and DOTME_PASS
-Your username and password
+This project was written with the intention of deploying this app to heroku.com, but can be hosted anywhere fine rubies are deployable. _If you already have an account on heroku, skip to step 3_.
 
-h2. DOTME_SECRET
-A random string used to protect the integrity of the session
+# Sign up for an account on "Heroku":https://api.heroku.com/signup
+# Install the heroku gem: <code>gem install heroku</code>
+# Fork the repository on github.com, and clone it.
+# From the app directory, Create the app on heroku: <code>heroku create appname</code> Change _appname_ to a value of your choosing.
+# Deploy the app: <code>git push heroku master</code>
+# Once the deployment completes, set up the database: <code>heroku rake setup</code>
+# Protect your app* settings by setting some Environment variables: <code>heroku config:add DOTME_USER=username DOTME_PASS=password</code>
+# Launch your app in the browser, and complete the setup of your Profile there: <code>heroku open</code>
+
+*The environment variables aren't meant to provide much protection, given that they are in plain text. By storing them as an Environment Variables, they will at least not stored in your git repository.
