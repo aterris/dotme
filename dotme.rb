@@ -59,15 +59,7 @@ end
 
 post '/setup' do
   if session['dotme']
-    profile=Profile.create(
-      :email=>params[:email],
-      :title=>params[:title],
-      :subtitle=>params[:subtitle],
-      :caption=>params[:caption],
-      :location=>params[:location],
-      :bio=>params[:bio],
-      :created_at=>Time.now
-    )
+    profile = Profile.first_or_create(:email => params[:email], :title => params[:title], :subtitle => params[:subtitle], :caption => params[:caption], :location => params[:location], :bio => params[:bio] )
   end
   redirect '/'
 end
