@@ -65,6 +65,7 @@ end
 post '/setup' do
   if session['dotme']
     profile = Profile.first_or_create(:email => params[:email], :title => params[:title], :subtitle => params[:subtitle], :caption => params[:caption], :location => params[:location], :bio => params[:bio] )
+    flash[:notice] = 'Profile created. Continue customizing it.'
   end
   redirect '/'
 end
