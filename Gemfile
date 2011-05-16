@@ -1,5 +1,6 @@
 source :gemcutter
 gem 'sinatra'
+gem 'rack-flash'
 gem 'json'
 gem 'i18n'
 gem 'data_mapper'

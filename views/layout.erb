@@ -12,6 +12,16 @@
   <script src="/js/jquery-1.6.1.min.js"></script>
 </head>
 <body>
-   <%= yield %>
+  <% unless flash.nil? %>
+  <section id="notices">
+    <% unless flash[:notice].nil? %>
+      <p class="flash notice"><%= flash[:notice] %></p>
+    <% end %>
+    <% unless flash[:error].nil? %>
+      <p class="flash error"><%= flash[:error] %></p>
+    <% end %>
+  </section>
+  <% end %>
+  <%= yield %>
 </body>
 </html>

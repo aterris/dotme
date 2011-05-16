@@ -1,4 +1,5 @@
 enable :sessions
+use Rack::Flash
 
 require 'models'
 require 'digest/md5'
@@ -33,6 +34,7 @@ end
 get '/login' do
   @title = 'dotme login'
   if session['dotme']
+    flash[:notice] = 'You are already logged in.'
     redirect '/'
   else
     erb :login
@@ -41,16 +43,18 @@ end
 
 post '/login' do
   unless params[:user] == ENV['DOTME_USER'] && params[:pass] == ENV['DOTME_PASS']
-    #add flash message
+    flash[:error] = 'Username and/or password is not correct.'
     redirect '/login'
   else
+    flash[:notice] = 'Log in succesful.'
     session['dotme'] = true
     redirect '/'
   end
 end
 
 get '/logout' do
-  session.clear
+  session['dotme'] = nil
+  flash[:notice] = 'You have been logged out successfully.'
   redirect '/'
 end
 
