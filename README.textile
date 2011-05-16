@@ -16,3 +16,8 @@ This project was written with the intention of deploying this app to heroku.com,
 # Launch your app in the browser, and complete the setup of your Profile there: <code>heroku open</code>
 
 *The environment variables aren't meant to provide much protection, given that they are in plain text. By storing them as an Environment Variables, they will at least not stored in your git repository.
+
+h3. Brought to you by:
+
+* "Andrew Terris":http://dotme.andrewterris.com
+* "Eric Marden":http://xentek.heroku.com
