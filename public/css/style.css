@@ -1,5 +1,5 @@
 /* @override http://localhost:4567/css/style.css */
-
+/* @group Ungrouped */
 body {
 	background: #ffffff;
 	color: #333333;
@@ -103,12 +103,46 @@ figure#avatar img
 #links #twitter { background: url(/img/social/twitter.png); }
 #links #facebook { background: url(/img/social/facebook.png); }
 #links #linkedin { background: url(/img/social/linkedin.png); }
+/* @end */
 
-/* @group */
+/* @group Login Form*/
 #login
 {
 	width: 600px;
 	margin: 0px auto;
 	margin-top: 115px;
+}
+/* @end */
+
+/* @group Config Bar */
+#config-bar
+{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width:  100%;
+	border-bottom: 1px solid #ddd;
+	
+}
+
+#config-nav, #config-admin
+{
+	margin: .5em 0em;
+}
+
+#config-nav
+{
+	float: left;
+}
+
+#config-admin
+{
+	float: right;
+}
+#config-nav li, #config-admin li
+{
+	display: inline;
+	list-style-type: none;
+	padding-right: 20px;
 }
 /* @end */
