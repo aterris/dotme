@@ -1,12 +1,38 @@
-<div id="config-bar">
+<nav id="config-bar">
 	<ul id="config-nav">
-		<li id="config-options"><a href="#">Options</a></li>
-		<li id="config-profile"><a href="#">Profile</a></li>
-		<li id="config-links"><a href="#">Links</a></li>
+		<li id="config-options">
+			<a href="#">Options</a>
+			<section class="config-bar-menu">
+				<form action="/update" method="post">
+					<input type="submit" value="Save">
+				</form>
+			</section>
+		</li>
+		<li id="config-profile">
+			<a href="#">Profile</a>
+			<section class="config-bar-menu">
+				<form action="/update" method="post">
+					<input type="text" name="profile-title" value="<%= @profile.title %>">
+					<input type="text" name="profile-subtitle" value="<%= @profile.subtitle %>">
+					<input type="text" name="profile-caption" value="<%= @profile.caption %>">
+					<input type="text" name="profile-location" value="<%= @profile.location %>">
+					<textarea name="profile-bio"><%= @profile.bio %></textarea>
+					<input type="submit" value="Save">
+				</form>
+			</section>
+		</li>
+		<li id="config-links">
+			<a href="#">Links</a>
+			<section class="config-bar-menu">
+				<form action="/update" method="post">
+					<input type="submit" value="Save">
+				</form>
+			</section>
+		</li>
 	</ul>
 	
 	<ul id="config-admin">
 		<li id="logout"><a href="/logout">Logout</a></li>
 		<li id="hide"><a href="#">Hide</a></li>
 	</ul>
-</div>
+</nav>
