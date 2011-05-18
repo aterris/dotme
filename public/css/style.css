@@ -150,14 +150,15 @@ figure#avatar img
 .config-bar-menu
 {
 	position: absolute;
-	top: 2em;
+	top: 1em;
 	left: 0em;
 	width: 300px;
 	height: 300px;
 	border:  1px solid #ddd;
 	display: none;
+	background: #fff;
 }
-#config-nav li:hover .config-bar-menu
+#config-nav li:hover .config-bar-menu, #config-nav:hover
 {
 	display: block;
 }
