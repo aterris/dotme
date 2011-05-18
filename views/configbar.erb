@@ -4,17 +4,29 @@
 			<a href="#">Options</a>
 			<section class="config-bar-menu">
 				<form action="/update" method="post">
-					<label for="option-background-color">Background Color</label>
-					<input type="text" name="option-background-color" value="">
-					<label for="option-font">Font</label>
-					<select name="option-font">
-						<option value="droid-sans">Droid Sans</option>
-					</select>
-					<label for="option-header-font-color">Header Text Color</label>
-					<input type="text" name="option-header-font-color" value="">
-					<label for="option-header-font-color">Body Text Color</label>
-					<input type="text" name="option-header-font-color" value="">
-					<input type="submit" value="Save">
+					<ul>
+						<li>
+							<label for="option-background-color">Background Color</label>
+							<input type="text" name="option-background-color" value="">
+						</li>
+						<li>
+							<label for="option-font">Font</label>
+							<select name="option-font">
+								<option value="droid-sans">Droid Sans</option>
+							</select>
+						</li>
+						<li>
+							<label for="option-header-font-color">Header Text Color</label>
+							<input type="text" name="option-header-font-color" value="">
+						</li>
+						<li>
+							<label for="option-header-font-color">Body Text Color</label>
+							<input type="text" name="option-header-font-color" value="">
+						</li>
+						<li>
+							<input type="submit" value="Save">
+						</li>
+					</ul>
 				</form>
 			</section>
 		</li>
@@ -22,17 +34,31 @@
 			<a href="#">Profile</a>
 			<section class="config-bar-menu">
 				<form action="/update" method="post">
-					<label for="profile-title">Title</label>
-					<input type="text" name="profile-title" value="<%= @profile.title %>">
-					<label for="profile-subtitle">Subtitle</label>
-					<input type="text" name="profile-subtitle" value="<%= @profile.subtitle %>">
-					<label for="profile-caption">Caption</label>
-					<input type="text" name="profile-caption" value="<%= @profile.caption %>">
-					<label for="profile-location">Location</label>
-					<input type="text" name="profile-location" value="<%= @profile.location %>">
-					<label for="profile-bio">Bio</label>
-					<textarea name="profile-bio"><%= @profile.bio %></textarea>
-					<input type="submit" value="Save">
+					<ul>
+						<li>
+							<label for="profile-title">Title</label>
+							<input type="text" name="profile-title" value="<%= @profile.title %>">
+						</li>
+						<li>
+							<label for="profile-subtitle">Subtitle</label>
+							<input type="text" name="profile-subtitle" value="<%= @profile.subtitle %>">
+						</li>
+						<li>
+							<label for="profile-caption">Caption</label>
+							<input type="text" name="profile-caption" value="<%= @profile.caption %>">
+						</li>
+						<li>
+							<label for="profile-location">Location</label>
+							<input type="text" name="profile-location" value="<%= @profile.location %>">
+						</li>
+						<li>
+							<label for="profile-bio">Bio</label>
+							<textarea name="profile-bio"><%= @profile.bio %></textarea>
+						</li>
+						<li>
+							<input type="submit" value="Save">
+						</li>
+					</ul>
 				</form>
 			</section>
 		</li>
@@ -40,11 +66,17 @@
 			<a href="#">Links</a>
 			<section class="config-bar-menu">
 				<form action="/update" method="post">
-					<% @links.each do |link| %>
-					<label for="link-<%= link.name %>"><%= link.name %></label>
-					<input type="text" name="link-<%= link.name %>" value="<%= link.url %>"> 
-					<% end %>
-					<input type="submit" value="Save">
+					<ul>
+						<% @links.each do |link| %>
+						<li>
+							<label for="link-<%= link.name %>"><%= link.name %></label>
+							<input type="text" name="link-<%= link.name %>" value="<%= link.url %>"> 
+						</li>
+						<% end %>
+						<li>
+							<input type="submit" value="Save">
+						</li>
+					</ul>
 				</form>
 			</section>
 		</li>
