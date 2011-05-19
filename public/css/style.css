@@ -4,12 +4,11 @@ body {
 	background: #ffffff;
 	color: #333333;
   font-family: 'Droid Sans', arial, serif;
-  margin: 0px;
 }
 
 figure#avatar
 {
-  padding:16px 12px 16px 12px;
+  padding:12px 12px 12px 12px;
   border: 1px solid #e3e3e3;
   display: block;
   width:175px;
@@ -63,11 +62,6 @@ figure#avatar img
   border-top: 1px dashed #e3e3e3;
 }
 
-#profile h1
-{
-  margin: 0px;
-}
-
 #links
 {
   height: 128px;
@@ -106,6 +100,7 @@ figure#avatar img
 /* @end */
 
 /* @group Login Form*/
+
 #login
 {
 	width: 600px;
@@ -115,6 +110,9 @@ figure#avatar img
 /* @end */
 
 /* @group Config Bar */
+
+/* @group Bar Styles */
+
 #config-bar
 {
 	position: absolute;
@@ -127,11 +125,6 @@ figure#avatar img
 	
 }
 
-#config-nav, #config-admin
-{
-	margin: 0em 0em;
-}
-
 #config-nav
 {
 	float: left;
@@ -141,26 +134,57 @@ figure#avatar img
 {
 	float: right;
 }
-#config-nav li, #config-admin li
+#config-nav > li, #config-admin > li
 {
 	display: inline;
 	list-style-type: none;
-	padding-right: 20px;
 	position: relative;
 }
+#config-nav > li
+{
+	padding-right: 20px;	
+}
+#config-admin > li
+{
+	padding-left: 20px;	
+}
+/* @end */
 
+/* @group Form Styles */
 .config-bar-menu
 {
 	position: absolute;
 	top: 1em;
 	left: 0em;
-	width: 300px;
+	width: 400px;
 	border:  1px solid #ddd;
 	display: none;
 	background: #fff;
+	padding: 10px 30px;
 }
 #config-nav li:hover .config-bar-menu, #config-nav:hover
 {
 	display: block;
 }
+
+.config-bar-menu form li
+{
+	clear: left;
+	display: list-item;
+	padding: 0px;
+	
+}
+
+.config-bar-menu form li label
+{
+	width: 200px;
+	float: left;
+}
+
+.config-bar-menu form input
+{
+	width: 196px;
+}
+
+/* @end */
 /* @end */
