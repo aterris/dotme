@@ -127,11 +127,13 @@ figure#avatar img
 #config-nav
 {
 	float: left;
+	margin-left: 1em;
 }
 
 #config-admin
 {
 	float: right;
+	margin-right: 1em;
 }
 #config-nav > li, #config-admin > li
 {
