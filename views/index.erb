@@ -1,6 +1,12 @@
 <% if @profile %>
+
   <%= erb :profile %>
   <%= erb :links %>
+  
+  <% if @dotme %>
+    <%= erb :configbar %>
+  <% end %>
+
 <% else %>
   <%= erb :setup %>
 <% end %>
