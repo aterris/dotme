@@ -54,10 +54,6 @@
 	background: #fff;
 	padding: 10px 30px;
 }
-#config-nav li:hover .config-bar-menu, #config-nav:hover
-{
-	display: block;
-}
 
 .config-bar-menu form li
 {
