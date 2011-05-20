@@ -7,6 +7,13 @@
   <link href='http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/reset.css">
   <link rel="stylesheet" href="/css/style.css">
+  
+  <% if @dotme %>
+     <link rel="stylesheet" href="/css/configbar.css">
+  <% end %>
+ 
+
+
   <!--[if lt IE 9]>
   <script src="/js/html5shiv.js"></script>
   <![endif]-->
@@ -24,6 +31,9 @@
   </section>
   <% end %>
   <%= yield %>
-  <script src="/js/dotme.js"></script>
+
+  <% if @dotme %>
+    <script src="/js/configbar.js"></script>
+  <% end %>
 </body>
 </html>
