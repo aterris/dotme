@@ -1,7 +1,7 @@
 // Config Bar
 jQuery(document).ready(function($){
 	//Config Bar Control
-	$('#config-bar ul > li a').click(function(){
+	$('#config-nav > li a').click(function(){
 		$(this).next().toggle();
 		return false;
 	});
