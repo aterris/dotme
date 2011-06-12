@@ -1,4 +1,4 @@
-<section id="profile">
+<section class="module" id="profile">
   <section id="overview">
     <figure id="avatar">
       <img src="<%= @avatar %>" alt="<%= @profile.title %>" />
@@ -6,8 +6,10 @@
     <section id="info">
       <h1><%= @profile.title %></h1>
       <h2><%= @profile.subtitle %></h2>
+      <h3><%= @profile.location %></h3>
     </section>
-  </section>
+  <div style="clear:both"></div>
+ </section>
   <div style="clear:both"></div>
   <section id="details">
     <p><%= @profile.bio %></p>

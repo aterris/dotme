@@ -1,18 +1,49 @@
 /* @override http://localhost:4567/css/style.css */
-/* @group Ungrouped */
-body {
-	background: #ffffff;
-	color: #333333;
-  	font-family: 'Droid Sans', arial, serif;
+
+/* @group General */
+body 
+{
+	background: #fff;
+	color: #333;
+  	font: normal 100% 'Droid Sans', arial, serif;
+  	letter-spacing: 0.15em;
+  	text-align:left;
+  	padding-top: 10%;
 }
 
-figure#avatar
+/* @group Typography */
+h1{ font-size: 3em; }
+h2{ font-size: 2em; margin: .5em 0em 1.25em; }
+h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; }
+h4{ font-size: 1.75em; margin: .125em 0em; }
+h5{ font-size: 1.50em; margin: .25em 0em; }
+h6{ font-size: 1.25em; margin: .375em 0em;}
+/* @end */
+
+/* @group Modules */
+.module
 {
-  padding:12px 12px 12px 12px;
+	width: 45%;
+	margin: 0px auto;
+}
+/* @end */
+/* @end */
+
+/* @group Profile Module */
+#profile #details
+{
+  margin: 40px auto;
+  padding: 40px 0px;
+  border-top: 1px dashed #e3e3e3;
+}
+
+#profile figure#avatar
+{
+  padding:12px;
+  margin: -12px 0px 0px -12px;
   border: 1px solid #e3e3e3;
-  display: block;
-  width:175px;
-  height:175px;
+  width:auto;
+  height: 12em;
   float:left;
   background: #f7f7f7;  
   -moz-border-radius:4px;
@@ -23,45 +54,24 @@ figure#avatar
   box-shadow:0px 0px 6px #666;
 }
 
-figure#avatar img
+#profile figure#avatar img
 {
+  max-width: 100%;
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
 }
 
-#profile
+@media screen and (max-width: 480px)
 {
-  border-bottom:1px solid #dfdfdf;
-  background: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 65%, #F0F0F0 100%);
-  background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FFFFFF), color-stop(65%,#FFFFFF), color-stop(100%,#F0F0F0));
-  background: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 65%, #F0F0F0 100%);
-  background: linear-gradient(top, #FFFFFF 0%, #FFFFFF 65%, #F0F0F0 100%);
+	figure#avatar
+	{
+		display: none;
+	}	
 }
+/* @end */
 
-#profile #overview
-{
-  width: 600px;
-  margin: 0px auto;
-  margin-top: 115px;
-}
-
-#info
-{
-  width:373px;
-  float:right;
-  text-align:left;
-}
-
-#profile #details
-{
-  width:600px;
-  margin: 0px auto;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  border-top: 1px dashed #e3e3e3;
-}
-
+/* @group Links Module */
 #links
 {
   height: 128px;
@@ -70,13 +80,6 @@ figure#avatar img
   background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FFE4E3), color-stop(36%,#FFFFFF), color-stop(100%,#FFFFFF));
   background: -o-linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
   background: linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
-}
-
-#links ul
-{
-  width:600px;
-  margin: 0px auto;
-  margin-top: 25px;
 }
 
 #links ul li
@@ -100,7 +103,6 @@ figure#avatar img
 /* @end */
 
 /* @group Login Form*/
-
 #login
 {
 	width: 600px;

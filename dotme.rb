@@ -25,7 +25,7 @@ get '/' do
     @profile = Profile.get(1)
     @title = @profile.title
     email_digest = Digest::MD5.hexdigest(@profile.email)
-    @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=175&d=retro"
+    @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=512&d=retro"
     @links = Link.all()
     @options = Option.all()
   end
