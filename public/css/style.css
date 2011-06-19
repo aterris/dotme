@@ -12,7 +12,7 @@ body
 }
 
 /* @group Typography */
-h1{ font-size: 3em; }
+h1{ font-family: 'Bevan'; width: 100% }
 h2{ font-size: 2em; margin: .5em 0em 1.25em; }
 h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; }
 h4{ font-size: 1.75em; margin: .125em 0em; }
@@ -23,13 +23,18 @@ h6{ font-size: 1.25em; margin: .375em 0em;}
 /* @group Modules */
 .module
 {
-	width: 45%;
-	margin: 0px auto;
+	
 }
 /* @end */
 /* @end */
 
 /* @group Profile Module */
+#profile #details, #profile #overview
+{
+	width:45%;
+	margin: 0px auto;
+}
+
 #profile #details
 {
   margin: 40px auto;
@@ -42,7 +47,7 @@ h6{ font-size: 1.25em; margin: .375em 0em;}
   padding:12px;
   margin: -12px 0px 0px -12px;
   border: 1px solid #e3e3e3;
-  width:auto;
+  width:150px;
   height: 12em;
   float:left;
   background: #f7f7f7;  
@@ -75,31 +80,65 @@ h6{ font-size: 1.25em; margin: .375em 0em;}
 #links
 {
   height: 128px;
+  padding: 35px 0px;
   border-top:1px solid #FFB8B5; 
   background: -moz-linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
   background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FFE4E3), color-stop(36%,#FFFFFF), color-stop(100%,#FFFFFF));
   background: -o-linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
   background: linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
 }
-
+#links ul
+{
+	display:table;
+	margin:0px auto;
+}
 #links ul li
 {
   list-style-type: none;
   display: inline;
+  width: 64px;
+  height: 64px;
+  
 }
 
 #links ul li a
 {
-  width: 40px;
-  height:40px;
-  text-indent:-1000em;
   display:block;
   float:left;
+  width: 64px;
+  height:64px;
+  margin: 5px 5px;
+  text-indent:-1000em;
+  
+  background: #666 url(/img/links.png);
+  opacity: 0.6;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 15px;
+
+  -o-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3) inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -webkit-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+
+  -webkit-transition: all .4s ease;
 }
 
-#links #twitter { background: url(/img/social/twitter.png); }
-#links #facebook { background: url(/img/social/facebook.png); }
-#links #linkedin { background: url(/img/social/linkedin.png); }
+#links ul li a:hover, #links ul li a:active
+{
+  opacity: 1.0;
+  border-radius: 5px;
+
+}
+
+#links #portfolio { background-position: 0px 0px; }
+#links #twitter { background-position: 0px 0px; }
+#links #facebook { background-position: 380px 0px }
+#links #github { background-position: 64px 0px; }
+#links #forrst { background-position: 190px 0px; }
+#links #dribble { background-position: 0px 0px; }
+#links #linkedin { background-position: 125px 0px }
+#links #gowalla { background-position: 315px 0px; }
+#links #foursquare { background-position: 252px 0px; }
 /* @end */
 
 /* @group Login Form*/
