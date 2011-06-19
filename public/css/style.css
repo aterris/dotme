@@ -11,8 +11,10 @@ body
   	padding-top: 7.5%;
 }
 
+img { max-width: 100%; }
+
 /* @group Typography */
-h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; }
+h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; text-shadow: 1px 1px 0px rgba(100,100,100,0.6); }
 h2{ font-size: 2em; margin: .5em 0em 1.25em; }
 h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; color: #333; width: 65%}
 h4{ font-size: 1.75em; margin: .125em 0em; }
@@ -26,14 +28,14 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 /* @group Profile Module */
 #profile #details, #profile #overview
 {
-	margin: 0px auto;
-	min-width: 384px;
+  margin: 0px auto;
+  width: 61.803402%;
+  max-width: 632.866836px;
+  min-width: 384px;
 }
 
 #profile #overview
 {
-  width:48%;
-  max-width: 960px;
   min-width: 384px;
   padding: 0 0 5%;
   border-bottom: 1px dashed #e3e3e3;
@@ -41,10 +43,8 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 
 #profile #details
 {
-  width: 40%;
-  max-width: 700px;
   margin: 0 auto 3em;
-  padding: 30px 0px 0px;
+  padding: 2em 0px 0px;
 }
 
 #profile #info
@@ -55,7 +55,7 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 
 #profile figure#avatar
 {
-  padding:12px;
+  padding:1em;
   margin: 0 0 0 0;
   border: 1px solid #e3e3e3;
   width:25%;
@@ -123,9 +123,6 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 {
   list-style-type: none;
   display: inline;
-  width: 64px;
-  height: 64px;
-  
 }
 
 #links ul li a
