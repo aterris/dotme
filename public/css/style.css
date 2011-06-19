@@ -8,47 +8,56 @@ body
   	font: normal 100% 'Droid Sans', arial, serif;
   	letter-spacing: 0.15em;
   	text-align:left;
-  	padding-top: 10%;
+  	padding-top: 7.5%;
 }
 
 /* @group Typography */
-h1{ font-family: 'Bevan'; width: 100% }
+h1{ font-size: 3em; font-family: 'Bevan'; }
 h2{ font-size: 2em; margin: .5em 0em 1.25em; }
-h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; }
+h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; color: #333; }
 h4{ font-size: 1.75em; margin: .125em 0em; }
 h5{ font-size: 1.50em; margin: .25em 0em; }
 h6{ font-size: 1.25em; margin: .375em 0em;}
+p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 /* @end */
 
-/* @group Modules */
-.module
-{
-	
-}
-/* @end */
 /* @end */
 
 /* @group Profile Module */
 #profile #details, #profile #overview
 {
-	width:45%;
 	margin: 0px auto;
+}
+
+#profile #overview
+{
+  width:48%;
+  max-width: 960px;
+  padding: 0 0 3.5em;
+  border-bottom: 1px dashed #e3e3e3;
 }
 
 #profile #details
 {
-  margin: 40px auto;
-  padding: 40px 0px;
-  border-top: 1px dashed #e3e3e3;
+  width: 40%;
+  max-width: 700px;
+  margin: 0 auto 3em;
+  padding: 30px 0px 0px;
+}
+
+#profile #info
+{
+  margin: 0 0 0 25%;
+  width:75%;
 }
 
 #profile figure#avatar
 {
   padding:12px;
-  margin: -12px 0px 0px -12px;
+  margin: -12px 2em 0px -12px;
   border: 1px solid #e3e3e3;
-  width:150px;
-  height: 12em;
+  width:25%;
+  height: auto;
   float:left;
   background: #f7f7f7;  
   -moz-border-radius:4px;
@@ -72,6 +81,24 @@ h6{ font-size: 1.25em; margin: .375em 0em;}
 	figure#avatar
 	{
 		display: none;
+	}
+	
+	#profile #info
+	{
+	  margin: 0 0 0 0em;
+	}
+	
+	#profile #details, #profile #overview
+	{
+	width:80%;
+	}	
+}
+
+@media screen and (max-width: 800px)
+{	
+	#profile #details, #profile #overview
+	{
+	width:65%;
 	}	
 }
 /* @end */
@@ -130,6 +157,8 @@ h6{ font-size: 1.25em; margin: .375em 0em;}
 
 }
 
+/* @group Link Image Sprite */
+
 #links #portfolio { background-position: 0px 0px; }
 #links #twitter { background-position: 0px 0px; }
 #links #facebook { background-position: 380px 0px }
@@ -139,6 +168,8 @@ h6{ font-size: 1.25em; margin: .375em 0em;}
 #links #linkedin { background-position: 125px 0px }
 #links #gowalla { background-position: 315px 0px; }
 #links #foursquare { background-position: 252px 0px; }
+
+/* @end */
 /* @end */
 
 /* @group Login Form*/
