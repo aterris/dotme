@@ -12,9 +12,9 @@ body
 }
 
 /* @group Typography */
-h1{ font-size: 3em; font-family: 'Bevan'; }
+h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; }
 h2{ font-size: 2em; margin: .5em 0em 1.25em; }
-h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; color: #333; }
+h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; color: #333; width: 65%}
 h4{ font-size: 1.75em; margin: .125em 0em; }
 h5{ font-size: 1.50em; margin: .25em 0em; }
 h6{ font-size: 1.25em; margin: .375em 0em;}
@@ -27,13 +27,15 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 #profile #details, #profile #overview
 {
 	margin: 0px auto;
+	min-width: 384px;
 }
 
 #profile #overview
 {
   width:48%;
   max-width: 960px;
-  padding: 0 0 3.5em;
+  min-width: 384px;
+  padding: 0 0 5%;
   border-bottom: 1px dashed #e3e3e3;
 }
 
@@ -47,14 +49,14 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 
 #profile #info
 {
-  margin: 0 0 0 25%;
-  width:75%;
+  margin: 0 0 0 35%;
+  width:65%;
 }
 
 #profile figure#avatar
 {
   padding:12px;
-  margin: -12px 2em 0px -12px;
+  margin: 0 0 0 0;
   border: 1px solid #e3e3e3;
   width:25%;
   height: auto;
@@ -91,14 +93,12 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 	#profile #details, #profile #overview
 	{
 	width:80%;
-	}	
-}
-
-@media screen and (max-width: 800px)
-{	
-	#profile #details, #profile #overview
+	}
+	
+	#profile #info
 	{
-	width:65%;
+		width:80%;
+		
 	}	
 }
 /* @end */

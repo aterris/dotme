@@ -1,10 +1,10 @@
-<section class="module" id="profile">
+<div class="module" id="profile">
   <section id="overview">
     <figure id="avatar">
       <img src="<%= @avatar %>" alt="<%= @profile.title %>" />
     </figure>
     <section id="info">
-      <h1><%= @profile.title %></h1>
+      <h1 id="fittext"><%= @profile.title %></h1>
       <h2><%= @profile.subtitle %></h2>
       <h3><%= @profile.location %></h3>
     </section>
@@ -14,4 +14,4 @@
   <section id="details">
     <%= @profile.bio %>
   </section>
-</section>
+</div>

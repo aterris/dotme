@@ -17,6 +17,8 @@
   <script src="/js/html5shiv.js"></script>
   <![endif]-->
   <script src="/js/jquery-1.6.1.min.js"></script>
+
+
 </head>
 <body>
   <% unless flash.nil? %>
@@ -34,5 +36,10 @@
   <% if @dotme %>
     <script src="/js/configbar.js"></script>
   <% end %>
+
+  <script src="/js/jquery.fittext.js"></script> 
+  <script> 
+    $("#profile h1, #profile h2, #profile h3").fitText(0.9);
+  </script>
 </body>
 </html>
