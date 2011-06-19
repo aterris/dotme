@@ -5,7 +5,7 @@ class Profile
   property :id,           Serial, :key => true
   property :email,        String
   property :title,        String
-  property :subtitle,     String
+  property :subtitle,     Text
   property :caption,      String
   property :location,     String
   property :bio,          Text
