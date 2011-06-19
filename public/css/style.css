@@ -3,7 +3,7 @@
 /* @group General */
 body 
 {
-	background: #fff;
+	background: #fafafa;
 	color: #333;
   	font: normal 100% 'Droid Sans', arial, serif;
   	letter-spacing: 0.15em;
@@ -14,9 +14,9 @@ body
 img { max-width: 100%; }
 
 /* @group Typography */
-h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; text-shadow: 1px 1px 0px rgba(100,100,100,0.6); }
-h2{ font-size: 2em; margin: .5em 0em 1.25em; }
-h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; color: #333; width: 65%}
+h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; text-shadow: 1px 1px 1px rgba(255,255,255,1); }
+h2{ font-size: 1.5em; margin: 0em 0em 0.5em; text-shadow: 1px 1px 1px rgba(255,255,255,1); }
+h3{ font-size: 1.5em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; width: 65%; opacity: 0.5; text-shadow: 1px 1px 1px rgba(255,255,255,1); }
 h4{ font-size: 1.75em; margin: .125em 0em; }
 h5{ font-size: 1.50em; margin: .25em 0em; }
 h6{ font-size: 1.25em; margin: .375em 0em;}
@@ -93,12 +93,13 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 	#profile #details, #profile #overview
 	{
 	width:80%;
+	min-width: 0px;
 	}
 	
 	#profile #info
 	{
-		width:80%;
-		
+	  width:100%;
+	  min-width: 0px;
 	}	
 }
 /* @end */
@@ -177,3 +178,5 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 	margin-top: 115px;
 }
 /* @end */
+
+/* My Comment */
