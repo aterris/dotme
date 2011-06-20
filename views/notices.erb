@@ -1,0 +1,8 @@
+<section id="notices">
+   <% unless flash[:notice].nil? %>
+    <p class="flash notice"><%= flash[:notice] %></p>
+  <% end %>
+  <% unless flash[:error].nil? %>
+    <p class="flash error"><%= flash[:error] %></p>
+  <% end %>
+</section>

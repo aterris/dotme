@@ -9,27 +9,31 @@ body
   	letter-spacing: 0.15em;
   	text-align:left;
   	padding-top: 7.5%;
+  	width: 100%;
 }
 
 img { max-width: 100%; }
 
 /* @group Typography */
-h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; text-shadow: 1px 1px 1px rgba(255,255,255,1); }
-h2{ font-size: 1.5em; margin: 0em 0em 0.5em; text-shadow: 1px 1px 1px rgba(255,255,255,1); }
-h3{ font-size: 1.25em; margin: 0em 0em; text-transform: uppercase; font-family: 'Bevan'; width: 65%; opacity: 0.5; text-shadow: 1px 1px 1px rgba(255,255,255,1); }
-h4{ font-size: 1.75em; margin: .125em 0em; }
-h5{ font-size: 1.50em; margin: .25em 0em; }
-h6{ font-size: 1.25em; margin: .375em 0em;}
-p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
+h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em; }
+h2{ font-size: 1.5em; margin: 0 0 0.5em; text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em;}
+h3{ font-size: 1.25em; margin: 0 0; text-transform: uppercase; font-family: 'Bevan'; width: 65%; opacity: 0.5; text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em; }
+h4{ font-size: 1.75em; margin: .125em 0; }
+h5{ font-size: 1.50em; margin: .25em 0; }
+h6{ font-size: 1.25em; margin: .375em 0;}
+p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
 /* @end */
 
 /* @end */
 
 /* @group Profile Module */
+
+/* @group Mobile (Standard) */
+
 #profile #details, #profile #overview
 {
-  margin: 0px auto;
-  width: 61.803402%;
+  margin: 0 auto;
+  width: 80%;
   max-width: 632.866836px;
   min-width: 384px;
 }
@@ -43,17 +47,18 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 #profile #details
 {
   margin: 0 auto 3em;
-  padding: 2em 0px 0px;
+  padding: 1em 0 0;
 }
 
 #profile #info
 {
-  margin: 0 0 0 35%;
-  width:65%;
+  margin: 0;
+  width:100%;
 }
 
-#profile figure#avatar
+#profile #avatar
 {
+  display: none;
   padding:2%;
   margin: 0 0 0 0;
   border: 1px solid #e3e3e3;
@@ -64,12 +69,12 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
-  -moz-box-shadow:0px 0px 6px #666;
-  -webkit-box-shadow:0px 0px 6px #666;
-  box-shadow:0px 0px 6px #666;
+  -moz-box-shadow:0 0 6px #666;
+  -webkit-box-shadow:0 0 6px #666;
+  box-shadow:0 0 6px #666;
 }
 
-#profile figure#avatar img
+#profile #avatar img
 {
   max-width: 100%;
   -moz-border-radius:4px;
@@ -77,64 +82,53 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
   border-radius:4px;
 }
 
-@media screen and (max-width: 480px)
-{
-	figure#avatar
-	{
-		display: none;
-	}
-	
-	#profile #info
-	{
-	  margin: 0 0 0 0em;
-	}
-	
-	#profile #details, #profile #overview
-	{
-	width:80%;
-	min-width: 0px;
-	}
-	
-	#profile #info
-	{
-	  width:100%;
-	  min-width: 0px;
-	  margin: 0;
-	  padding: 0;
-	}	
-	
-	#profile #overview { display: none; }
-	#profile #details { display: none; }
-	#links { display: none; }
-	#profile { display: none; }
-	body {display: none; }
+/* @end */
 
+@media screen and (min-width: 480px)
+{
+  #profile #avatar
+  {
+    display: block;
+  }
+	
+  #profile #info
+  {
+    margin: 0 0 0 35%;
+    width:65%;
+  }
+	
+  #profile #details, #profile #overview
+  {
+    width: 61.803402%;
+    min-width: 384px;
+  }
 }
+
 /* @end */
 
 /* @group Links Module */
-#links
+.links
 {
   height: 128px;
-  padding: 35px 0px;
+  padding: 35px 0;
   border-top:1px solid #FFB8B5; 
   background: -moz-linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
   background: -webkit-gradient(linear, center top, center bottom, color-stop(0%,#FFE4E3), color-stop(36%,#FFFFFF), color-stop(100%,#FFFFFF));
   background: -o-linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
   background: linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
 }
-#links ul
+.links ul
 {
-	display:table;
-	margin:0px auto;
+	display: table;
+	margin: 0 auto;
 }
-#links ul li
+.links ul li
 {
   list-style-type: none;
   display: inline;
 }
 
-#links ul li a
+.links ul li a
 {
   display:block;
   float:left;
@@ -156,7 +150,7 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
   -webkit-transition: all .4s ease;
 }
 
-#links ul li a:hover, #links ul li a:active
+.links ul li a:hover, .links ul li a:active
 {
   opacity: 1.0;
   border-radius: 5px;
@@ -165,15 +159,15 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 
 /* @group Link Image Sprite */
 
-#links #portfolio { background-position: 0px 0px; }
-#links #twitter { background-position: 0px 0px; }
-#links #facebook { background-position: 380px 0px }
-#links #github { background-position: 64px 0px; }
-#links #forrst { background-position: 190px 0px; }
-#links #dribble { background-position: 0px 0px; }
-#links #linkedin { background-position: 125px 0px }
-#links #gowalla { background-position: 315px 0px; }
-#links #foursquare { background-position: 252px 0px; }
+.links #portfolio { background-position: 0 0; }
+.links #twitter { background-position: 0 0; }
+.links #facebook { background-position: 380px 0 }
+.links #github { background-position: 64px 0; }
+.links #forrst { background-position: 190px 0; }
+.links #dribble { background-position: 0 0; }
+.links #linkedin { background-position: 125px 0; }
+.links #gowalla { background-position: 315px 0; }
+.links #foursquare { background-position: 252px 0; }
 
 /* @end */
 /* @end */
@@ -182,7 +176,7 @@ p { margin: 1em 0em; font-size: 1em; line-height: 1.75em; }
 #login
 {
 	width: 600px;
-	margin: 0px auto;
+	margin: 0 auto;
 	margin-top: 115px;
 }
 /* @end */
