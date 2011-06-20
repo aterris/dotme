@@ -24,6 +24,7 @@ get '/' do
   else
     @profile = Profile.get(1)
     @title = @profile.title
+    @subtitle = @profile.subtitle
     email_digest = Digest::MD5.hexdigest(@profile.email)
     @avatar = "http://www.gravatar.com/avatar/#{email_digest}?s=512&d=retro"
     @links = Link.all()
