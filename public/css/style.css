@@ -15,13 +15,13 @@ body
 img { max-width: 100%; }
 
 /* @group Typography */
-h1{ font-size: 4em; font-family: 'Bevan'; width: 100%; text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em; }
-h2{ font-size: 1.5em; margin: 0 0 0.5em; text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em;}
-h3{ font-size: 1.25em; margin: 0 0; text-transform: uppercase; font-family: 'Bevan'; width: 65%; opacity: 0.5; text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em; }
+h1{ font-size: 4em; }
+h2{ font-size: 2.5em; }
+h3{ font-size: 2em; }
 h4{ font-size: 1.75em; }
 h5{ font-size: 1.50em; }
 h6{ font-size: 1.25em; }
-p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
+p { margin: 1em 0; line-height: 1.75em; }
 /* @end */
 
 /* @end */
@@ -29,13 +29,17 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
 /* @group Profile Module */
 
 /* @group Mobile (Standard) */
+#profile h1, #profile h2, #profile h3 { text-shadow: 1px 1px 1px rgba(255,255,255,1); line-height: 1.5em; width: 100%; }
+#profile h1{ font-size: 4em; font-family: 'Bevan'; }
+#profile h2{ font-size: 1.5em; margin: 0.2em 0 1em; }
+#profile h3{ font-size: 1.25em; font-family: 'Bevan'; text-transform: uppercase; width: 65%; opacity: 0.5; }
 
 #profile #details, #profile #overview
 {
   margin: 0 auto;
   width: 80%;
   max-width: 632.866836px;
-  min-width: 384px;
+  min-width: 0px;
 }
 
 #profile #overview
@@ -60,7 +64,7 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
 {
   display: none;
   padding:2%;
-  margin: 0 0 0 0;
+  margin: 0;
   border: 1px solid #e3e3e3;
   width:25%;
   height: auto;
@@ -76,7 +80,6 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
 
 #profile #avatar img
 {
-  max-width: 100%;
   -moz-border-radius:4px;
   -webkit-border-radius:4px;
   border-radius:4px;
@@ -107,7 +110,7 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
 /* @end */
 
 /* @group Links Module */
-.links
+#links
 {
   height: 128px;
   padding: 35px 0;
@@ -117,18 +120,20 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
   background: -o-linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
   background: linear-gradient(top, #FFE4E3 0%, #FFFFFF 36%, #FFFFFF 100%);
 }
-.links ul
+
+#links ul
 {
 	display: table;
 	margin: 0 auto;
 }
-.links ul li
+
+#links ul li
 {
   list-style-type: none;
   display: inline;
 }
 
-.links ul li a
+#links ul li a
 {
   display:block;
   float:left;
@@ -150,7 +155,7 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
   -webkit-transition: all .4s ease;
 }
 
-.links ul li a:hover, .links ul li a:active
+#links ul li a:hover, #links ul li a:active
 {
   opacity: 1.0;
   border-radius: 5px;
@@ -159,15 +164,15 @@ p { margin: 1em 0; font-size: 1em; line-height: 1.75em; }
 
 /* @group Link Image Sprite */
 
-.links #portfolio { background-position: 0 0; }
-.links #twitter { background-position: 0 0; }
-.links #facebook { background-position: 380px 0 }
-.links #github { background-position: 64px 0; }
-.links #forrst { background-position: 190px 0; }
-.links #dribble { background-position: 0 0; }
-.links #linkedin { background-position: 125px 0; }
-.links #gowalla { background-position: 315px 0; }
-.links #foursquare { background-position: 252px 0; }
+#links #portfolio { background-position: 0 0; }
+#links #twitter { background-position: 0 0; }
+#links #facebook { background-position: 380px 0 }
+#links #github { background-position: 64px 0; }
+#links #forrst { background-position: 190px 0; }
+#links #dribble { background-position: 0 0; }
+#links #linkedin { background-position: 125px 0; }
+#links #gowalla { background-position: 315px 0; }
+#links #foursquare { background-position: 252px 0; }
 
 /* @end */
 /* @end */
